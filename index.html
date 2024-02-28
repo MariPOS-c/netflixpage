@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="img/netflix_logo.png.png" alt="logo netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Lastest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button class="btbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="img/avatar-leyenda-aang-3277352.webp" alt="personaje" class="bg"/>
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="img/LogoLetras.png" alt="" class="movieTitle" width="1000">
+            <h4>
+                <span>2024</span>
+                <span><i>+13</i></span>
+                <span>8 Episodes</span>
+                <span>Serie</span>
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi corporis voluptates eveniet dolore, sit temporibus, incidunt, consequuntur assumenda repellendus voluptatibus porro! Vitae, explicabo fuga debitis cum at blanditiis excepturi?
+            </p>
+            <div class="buttons">
+                <a href="#">Play</a>
+                <a href="#">My List</a>
+            </div>
+            </div>
+            <a href="#" class="play" onclick="toggleVideo();"><img src="img/play.png" alt="trailer">Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="img/Avatar_ La leyenda de Aang _ Tráiler oficial _ Netflix.mp4" controls="true"></video>
+            <img src="img/Close.png" alt="" class="close" onclick="toggleVideo();">
+
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
